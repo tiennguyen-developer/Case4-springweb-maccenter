@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="fastRequestCurrentParamGroup">
+    <option name="className" value="com.codegym.shopcase4.controller.AdminController" />
+    <option name="filePath" value="" />
+    <option name="method" value="deleteProductById" />
+    <option name="module" value="shopcase4" />
+    <option name="originUrl" value="/admin/products/delete/{id}" />
+    <option name="pathParamMap">
+      <map>
+        <entry key="id">
+          <value>
+            <Object />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
+    <option name="url" value="/admin/products/delete/1" />
+  </component>
+</project>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet">
+
+    <title>Document</title>
+
+    <!-- Thư viện Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+
+        <!--        <a class="navbar-brand" href="#" th:href="@{/}">-->
+        <!--            <img alt="" class="d-inline-block align-top" height="70" src="../static/images/logo.png"-->
+        <!--                 th:src="@{/images/logo.png}" width="auto"/>-->
+        </a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" th:href="@{/}">HOME</a>
+                </li>
+
+                <!--                <li class="nav-item active">-->
+                <!--                    <a class="nav-link" href="#" th:href="@{/getAllProduct_AllCategory}">SHOP</a>-->
+                <!--                </li>-->
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" th:href="@{/cart}">GIỎ HÀNG</a>
+                </li>
+
+                <li class="nav-item active">
+                    <span class="nav-link" th:text="${cartCount}">0</span>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" sec:authorize="isAnonymous()" th:href="@{/login}">ĐĂNG NHẬP</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" sec:authorize="isAuthenticated()" th:href="@{/logout}">ĐĂNG XUẤT</a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!---->
+<br>
+<br>
+<br>
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        <div class="col-sm-2">
+            <h4>Danh Mục </h4>
+
+            <ul class="list-group">
+                <a th:href="@{/shop}">
+                    <li class="list-group-item">Tất cả thiết bị</li>
+                </a>
+
+                <a href="" th:each="category, iStat : ${categories}"
+                   th:href="@{/shop/category/{id}(id=${category.id})}">
+                    <li class="list-group-item" th:text="${category.name}"></li>
+                </a>
+
+            </ul>
+        </div>
+        <!--        <div class="col-sm-9">-->
+
+
+        <div class="col-sm-10 card-body  ">
+            <!--            <div class="card" style="margin-top: 20px" th:each="product : ${products}">-->
+            <!--            <div class="container text-center">-->
+            <div class="row row-cols-3">
+                <div class="card" style="margin-top: 20px" th:each="product : ${products}">
+
+                    <div class="card-body row no-gutters center">
+
+                        <div class=" card-body gutters center">
+                            <a th:href="@{/shop/product/{id}(id=${product.id})}">
+                                <img class="center-image" height="220px" th:alt="${product.name}"
+                                     th:src="@{${'/productImages/' + product.imageName}}" width="220px">
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h4 class="card-title" th:text="${product.name}"></h4>
+                            <h6><span th:text="${product.getPriceFormatted}"></span>đ</h6>
+
+                            <!--                            <h2>Giá: <span th:text="${product.price}"></span> triệu VNĐ</h2>-->
+                            <p th:text="${product.description}">Sản phẩm tạm thời hết hàng.
+                            </p>
+
+                            <!--                                                            <a class="btn btn-primary" href="#"-->
+                            <!--                                                               th:href="@{/getAllProduct_AllCategory/product/{id}(id=${product.id})}">Chi tiết-->
+                            <!--                                                            </a>-->
+
+                            <a class="btn btn-primary btn-block" href=""
+                               th:href="@{/addToCart/{id}(id=${product.id})}">Thêm vào giỏ hàng
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div></div>
+
+                    <tr align="center">
+                        <td style="height:50px;"></td>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container bg-light">
+</div>
+
+
+<script crossorigin="anonymous"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<!-- Thư viện Bootstrap JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

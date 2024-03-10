@@ -1,0 +1,159 @@
+body { font-family:Arial; font-size:12px; color:#5a5a5a; margin:0;}
+
+.MainMenu:link {font-family:Arial; font-size:12px; font-weight:normal;  color:#8D8D96; TEXT-DECORATION: none}
+.MainMenu:visited {font-family:Arial; font-size:12px; font-weight:normal;  COLOR: #8D8D96; TEXT-DECORATION: none}
+.MainMenu:active {font-family:Arial; font-size:12px; font-weight:normal;  COLOR: #8D8D96; TEXT-DECORATION: none}
+.MainMenu:hover {font-family:Arial; font-size:12px; font-weight:normal;  COLOR:#009EF9; TEXT-DECORATION: underline}
+
+.LinkReview:link {font-family:Arial; font-size:14px; font-weight:normal;  color:#5a5a5a; TEXT-DECORATION: none}
+.LinkReview:visited {font-family:Arial; font-size:14px; font-weight:normal;  COLOR: #5a5a5a; TEXT-DECORATION: none}
+.LinkReview:active {font-family:Arial; font-size:14px; font-weight:normal;  COLOR: #5a5a5a; TEXT-DECORATION: none}
+.LinkReview:hover {font-family:Arial; font-size:14px; font-weight:normal;  COLOR:#000000; TEXT-DECORATION: underline}
+
+.Footer:link {font-family:Arial; font-size:11px; font-weight:normal;  color:#5a5a5a; TEXT-DECORATION: none}
+.Footer:visited {font-family:Arial; font-size:11px; font-weight:normal;  COLOR: #5a5a5a; TEXT-DECORATION: none}
+.Footer:active {font-family:Arial; font-size:11px; font-weight:normal;  COLOR: #5a5a5a; TEXT-DECORATION: none}
+.Footer:hover {font-family:Arial; font-size:11px; font-weight:normal;  COLOR:#FFFFFF; TEXT-DECORATION: underline}
+
+.TitleProduct:link {font-family:Arial; font-size:12px; font-weight:bold;  color:#4c4c4c; TEXT-DECORATION: none}
+.TitleProduct:visited {font-family:Arial; font-size:12px; font-weight:bold;  COLOR: #4c4c4c; TEXT-DECORATION: none}
+.TitleProduct:active {font-family:Arial; font-size:12px; font-weight:bold;  COLOR: #4c4c4c; TEXT-DECORATION: none}
+.TitleProduct:hover {font-family:Arial; font-size:12px; font-weight:bold;  COLOR:#E60834; TEXT-DECORATION: underline}
+
+.FooterMenu:link {font-family:Arial; font-size:12px; font-weight:normal;  color:#009EF9; TEXT-DECORATION: underline}
+.FooterMenu:visited {font-family:Arial; font-size:12px; font-weight:normal;  COLOR: #009EF9; TEXT-DECORATION: underline}
+.FooterMenu:active {font-family:Arial; font-size:12px; font-weight:normal;  COLOR: #009EF9; TEXT-DECORATION: underline}
+.FooterMenu:hover {font-family:Arial; font-size:12px; font-weight:normal;  COLOR:#E60834; TEXT-DECORATION: underline}
+
+.FooterContent {font-family:Arial; font-size:12px; font-weight:normal;  COLOR:#7F7F7F;}
+.box_body ul 				{padding:0; margin:0px; margin-left:0px; list-style:none; }
+.box_body .bg_list			{background:url(../images/h_line_list.gif) 0px bottom repeat-x;}
+.box_body .bg_list a		{background:url(../images/list_marker.gif) 1px 4px no-repeat; padding-left:10px;
+							 color:#7F7F7F; font-size:12px; text-decoration:none; line-height:25px; font-family:Arial;}
+.box_body .bg_list a:hover  {color:#009EF9; font-size:12px; text-decoration: underline;}
+
+.HeaderTitle  {font-family:Arial; font-size:14px; font-weight:bold; COLOR:#000000; }
+
+.HeaderTitleNews:link {font-family:Arial; font-size:36px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderTitleNews:visited {font-family:Arial; font-size:36px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderTitleNews:active {font-family:Arial; font-size:36px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderTitleNews:hover {font-family:Arial; font-size:36px; font-weight:normal; COLOR:#5a5a5a; text-decoration:none; }
+
+.HeaderReview:link {font-family:Arial; font-size:24px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderReview:visited {font-family:Arial; font-size:24px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderReview:active {font-family:Arial; font-size:24px; font-weight:normal; COLOR:#000000; text-decoration:none; }
+.HeaderReview:hover {font-family:Arial; font-size:24px; font-weight:normal; COLOR:#5a5a5a; text-decoration:none; }
+
+.Hotline {font-family:Arial; font-size:20px; font-weight:bold; COLOR:#009EF9; }
+
+.productSpecialPrice {font-family:Arial; font-size:12px; font-weight:normal; COLOR:#000000; }
+
+.Table-Thin {border-collapse:collapse; border:1px solid Lavender;}
+.Td-Thin {border-collapse:collapse; border:1px solid Lavender;}
+.TitleDetail {font-family:Arial; font-size:42px; font-weight:normal; color:Black;}
+.ShortDescription {font-family:Arial; font-size:16px; font-weight:normal;}
+.PriceDetail {font-size:24px; font-weight:normal; }
+.PriceDetail2 {font-size:20px; font-weight:bold; color:#009EF9;}
+.lst-ShortDescription {padding: 8px;}
+.lst-Description {padding: 16px 8px 8px 8px; height:60px; vertical-align:top;}
+.lst-HeaderDescription {padding: 8px; text-align: left; border-bottom: 1px solid #ddd;}
+.longDescription {font-size:16px; line-height:1.6;}
+
+.Home:hover
+{
+opacity:0.7;
+filter:alpha(opacity=70); /* For IE8 and earlier */
+}
+
+.List
+{
+    padding-top: 10px;
+    padding-left:10px;    
+}
+
+
+/* Hieu ung Scroll */
+#scr1 div {
+  visibility:hidden;
+ }
+ #scr1, #scr1 div.default {
+   width:1081px;
+   height:414px;
+   overflow:hidden;
+   visibility:visible;
+ }
+ #scr1 table tr td div {
+  visibility:visible;
+ }
+
+ #scr1 {
+   background-color:#fff;
+   margin:0px auto;
+   font-size: .8em;
+ }
+ /* Ket thuc hieu ung Scroll */
+ 
+ /* Hieu ung Scroll HotProduct */
+#scr2 div {
+  visibility:hidden;
+ }
+ #scr2, #scr2 div.default {
+   width:340px;
+   height:550px;
+   overflow:hidden;
+   visibility:visible;
+ }
+ #scr2 table tr td div {
+  visibility:visible;
+ }
+
+ #scr2 {
+   background-color:#fff;
+   margin:0px auto;
+   font-size: .8em;
+ }
+/* Ket thuc hieu ung Scroll HotProduct */
+
+ul {padding:15px; margin:0px; font-size:12px; }
+
+
+/* Hieu ung Header giu nguyen khi cuon */
+#uberbar    { 
+    background-color:#FFFFFF;
+    padding:0px 0px;
+    position:fixed; 
+    top:0; 
+    left:0;
+    z-index:2000; 
+    width:100%;
+    height:90px;
+}
+
+#Navigation    { 
+    background-color:#FFFFFF;
+    padding:0px 0px; 
+    top:0;
+    left:0;
+    width:100%;
+}
+
+#MainFooter    { 
+    background-color:#FFFFFF;
+    padding:0px 0px;
+    top:0;
+    left:0;
+    width:1300px;
+    margin:auto;
+}
+
+.Center    { 
+    margin: 0px;
+    width:100%;
+}
+
+.Call   {
+    margin: left;
+    width: 300px;
+    border: 1px solid #5a5a5a;
+    padding: 10px;
+}
